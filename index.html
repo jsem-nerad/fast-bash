@@ -4,64 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick-Script</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #1a1a1a;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 600px;
-            width: 100%;
-        }
-        h1 {
-            color: #4ecdc4;
-            text-align: center;
-        }
-        h2 {
-            color: #f7fff7;
-        }
-        code {
-            background-color: #2c2c2c;
-            border: 1px solid #444;
-            border-radius: 4px;
-            padding: 2px 5px;
-            font-family: monospace;
-            display: inline-block;
-        }
-        .script {
-            margin-bottom: 20px;
-        }
-        .note {
-            background-color: #2c3e50;
-            padding: 10px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Quick Script Guide</h1>
-        <div class="script">
-            <h2>Install tmux </h2>
-            <p>Run this to update, and install tmux:</p>
-            <code>curl -sSL pi.vojtikdortik.eu/tmux | bash</code>
+        <nav>
+            <div class="logo">Fast Bash</div>
+        </nav>
+        
+        <div class="hero">
+            <h1>Simplify Linux with <span class="highlight">one-liners</span></h1>
+            <p class="description">A collection of premade bash scripts to make using Linux faster and easier.</p>
         </div>
-        <div class="script">
-            <h2>Install latest geckodriver</h2>
-            <p>Run this to install latest geckodriver:</p>
-            <code>curl -sSL pi.vojtikdortik.eu/geckodriver | bash</code>
+        
+        <div class="warning">
+            <strong>Note:</strong> This project is still in development and may not work as expected.
         </div>
-        <div class="note">
-            <strong>Note:</strong> Always review scripts before running them.
+        
+        <div class="code-block">
+            $ curl -sSL bash.vojtikdortik.eu/[script name] | bash
         </div>
+        
+        <div class="scripts">
+            <h2>Available Scripts</h2>
+            <div class="script-list">
+                <div class="script-item" data-script="install-docker">
+                    install-docker
+                    <div class="copy-indicator"></div>
+                </div>
+                <div class="script-item" data-script="install-tmux">
+                    install-tmux
+                    <div class="copy-indicator"></div>
+                </div>
+                <div class="script-item" data-script="install-geckodriver">
+                    install-geckodriver
+                    <div class="copy-indicator"></div>
+                </div>
+                <div class="script-item" data-script="start-wireless-ap">
+                    start-wireless-ap
+                    <div class="copy-indicator"></div>
+                </div>
+                <div class="script-item" data-script="stop-wireless-ap">
+                    stop-wireless-ap
+                    <div class="copy-indicator"></div>
+                </div>
+                <div class="script-item" data-script="install-raspi-fm">
+                    install-raspi-fm
+                    <div class="copy-indicator"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>How It Works</h2>
+            <p>Fast Bash provides a simple way to execute common Linux tasks with a single command. No need to remember complex installation steps or configuration details.</p>
+            
+            <div class="usage-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <span>Choose the script you need from my collection</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <span>Run the curl command with your desired script name</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <span>The script automatically handles installation and configuration</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Why Use Fast Bash</h2>
+            <p>Fast Bash scripts are designed for system administrators, developers, and Linux enthusiasts who want to save time on repetitive tasks. Each script is carefully crafted to follow best practices and security guidelines.</p>
+        </div>
+        
+        <footer>
+            <p>© Fast Bash 2025 • Created with ❤️ for the Linux community</p>
+        </footer>
     </div>
+
+    <script>
+        document.querySelectorAll('.script-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const scriptName = this.getAttribute('data-script');
+                const command = `curl -sSL bash.vojtikdortik.eu/${scriptName} | bash`;
+                
+                navigator.clipboard.writeText(command).then(() => {
+                    // Add copied class briefly
+                    this.classList.add('copied');
+                    
+                    // Remove the copied class after animation completes
+                    setTimeout(() => {
+                        this.classList.remove('copied');
+                    }, 1500);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
