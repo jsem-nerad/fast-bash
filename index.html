@@ -22,7 +22,7 @@
         </div>
         
         <div class="code-block">
-            $ curl -sSL bash.vojtikdortik.eu/[script name] | bash
+            $ curl -sSL script.vojtikdortik.eu/[script name] | bash
         </div>
         
         <div class="scripts">
@@ -89,7 +89,7 @@
         document.querySelectorAll('.script-item').forEach(item => {
             item.addEventListener('click', function() {
                 const scriptName = this.getAttribute('data-script');
-                const command = `curl -sSL bash.vojtikdortik.eu/${scriptName} | bash`;
+                const command = `curl -sSL script.vojtikdortik.eu/${scriptName} | bash`;
                 
                 navigator.clipboard.writeText(command).then(() => {
                     // Add copied class briefly
