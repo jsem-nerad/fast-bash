@@ -1,0 +1,3 @@
+jsem-nerad/fast-bash-scripts-only:
+  - source: scripts/
+    dest: /
