@@ -1,5 +1,8 @@
 name: Sync Scripts to Scripts-Only Repo
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
