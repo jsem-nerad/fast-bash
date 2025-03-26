@@ -22,3 +22,4 @@ jobs:
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
           CONFIG_PATH: .github/sync.yml
+          SKIP_PR: true
