@@ -3,7 +3,7 @@ No need to write long commands, just run a fast bash command
 
 ## You can find it on [bash.vojtikdortik.eu](https://bash.vojtikdortik.eu/)
 
-Just so you know, this is in early development phase, so there is not much things here, the website looks terrible and the name sounds really bad, but I am planing to change this
+Just so you know, this is in early development phase, so there is not much things here, the website looks terrible and some of the scripts may not work on some platforms, but I am planing to change this
 
 # Basic usage
 
