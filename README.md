@@ -1,7 +1,7 @@
 # Fast Bash
 No need to write long commands, just run a fast bash command
 
-## You can find it on [bash.vojtikdortik.eu](https://bash.vojtikdortik.eu/)
+## You can find it on [bash.jsem-nerad.cz](https://bash.jsem-nerad.cz/)
 
 Just so you know, this is in early development phase, so there is not much things here, the website looks terrible and some of the scripts may not work on some platforms, but I am planing to change this
 
@@ -10,10 +10,10 @@ Just so you know, this is in early development phase, so there is not much thing
 The base command always looks like this:
 
 ```bash
-curl -sSL script.vojtikdortik.eu/[script name] | bash
+curl -sSL script.jsem-nerad.cz/[script name] | bash
 ```
 
-If you want to save time, you can visit [bash.vojtikdortik.eu](https://bash.vojtikdortik.eu/), where you can just quickly copy the command and paste it into your terminal.
+If you want to save time, you can visit [bash.jsem-nerad.cz](https://bash.jsem-nerad.cz/), where you can just quickly copy the command and paste it into your terminal.
 
 ## Available Scripts
 
